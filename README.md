@@ -5,8 +5,8 @@
 * VIPERアーキテクチャで使うテンプレート
 * 以下のファイルを生成する
     * Entity以外の各ファイル
-    * それらのInterface
-    * PresenterとInteractorのテストファイル
+    * それらのInterface
+    * PresenterとInteractorのテストファイル
 
 ## viper-mock
 * VIPERアーキテクチャで使うテンプレート
