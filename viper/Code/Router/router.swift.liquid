@@ -16,7 +16,7 @@ class {{ module_info.name }}Router {
         self.viewController = viewController
     }
 
-    func assembleModules() -> UIViewController {
+    static func assembleModules() -> UIViewController {
         let view = {{ module_info.name }}ViewController()
         let interactor = {{ module_info.name }}Interactor()
         let router = {{ module_info.name }}Router(viewController: view)
