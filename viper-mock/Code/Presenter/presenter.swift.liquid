@@ -10,7 +10,7 @@ import Foundation
 
 class {{ module_info.name }}ViewPresenter {
 
-    let view: {{ module_info.name }}View
+    weak var view: {{ module_info.name }}View?
     let interactor: {{ module_info.name }}Usecase
     let router: {{ module_info.name }}Wireframe
 

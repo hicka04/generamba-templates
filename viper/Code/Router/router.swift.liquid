@@ -10,7 +10,7 @@ import UIKit
 
 class {{ module_info.name }}Router {
 
-    let viewController: UIViewController
+    weak var viewController: UIViewController?
 
     init(viewController: UIViewController) {
         self.viewController = viewController
