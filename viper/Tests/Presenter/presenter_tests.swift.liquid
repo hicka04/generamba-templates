@@ -11,14 +11,14 @@ import XCTest
 class {{ module_info.name }}PresenterTest: XCTestCase {
 
     var presenter: {{ module_info.name }}ViewPresentable!
+    let view = MockViewController()
+    let interactor = MockInteractor()
+    let router = MockRouter()
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
-        let view = MockViewController()
-        let interactor = MockInteractor()
-        let router = MockRouter()
         presenter = {{ module_info.name }}ViewPresenter(view: view, interactor: interactor, router: router)
     }
 

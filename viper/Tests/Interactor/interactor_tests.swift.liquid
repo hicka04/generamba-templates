@@ -11,13 +11,15 @@ import XCTest
 class {{ module_info.name }}InteractorTests: XCTestCase {
 
     var interactor: {{ module_info.name }}Usecase!
+    let presenter = MockPresenter()
+    let delegate = MockInteractorDelegate()
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         let interactor = {{ module_info.name }}Interactor()
-        interactor.output = MockPresenter()
+        interactor.delegate = delegate
         self.interactor = interactor
     }
 
@@ -27,10 +29,14 @@ class {{ module_info.name }}InteractorTests: XCTestCase {
     }
 
     // MARK: - mock
-    class MockPresenter: {{ module_info.name }}InteractorOutput {
+    class MockPresenter: {{ module_info.name }}ViewPresenter {
 
         func viewDidLoad() {
 
         }
+    }
+
+    class MockInteractorDelegate: {{ module_info.name }}InteractorDelegate {
+
     }
 }
