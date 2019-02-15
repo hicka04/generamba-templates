@@ -14,18 +14,9 @@ protocol {{ module_info.name }}View: class {
 }
 
 // MARK: - presenter
-protocol {{ module_info.name }}ViewPresentable: class {
+protocol {{ module_info.name }}ViewPresentation: class {
 
     func viewDidLoad()
-}
-
-// MARK: - interactor
-protocol {{ module_info.name }}Usecase: class {
-
-}
-
-protocol {{ module_info.name }}InteractorDelegate: class {
-
 }
 
 // MARK: - router

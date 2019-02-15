@@ -1,5 +1,5 @@
 //
-//  {{ prefix }}{{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.file_name }}
 //  {{ module_info.project_name }}
 //
 //  Created by {{ developer.name }} on {{ date }}.
@@ -10,16 +10,15 @@ import XCTest
 
 class {{ module_info.name }}PresenterTest: XCTestCase {
 
-    var presenter: {{ module_info.name }}ViewPresentable!
+    var presenter: {{ module_info.name }}ViewPresentation!
     let view = MockViewController()
-    let interactor = MockInteractor()
     let router = MockRouter()
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
-        presenter = {{ module_info.name }}ViewPresenter(view: view, interactor: interactor, router: router)
+        presenter = {{ module_info.name }}ViewPresenter(view: view, router: router)
     }
 
     override func tearDown() {
@@ -29,10 +28,6 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
 
     // MARK: - mock
     class MockViewController: {{ module_info.name }}View {
-
-    }
-
-    class MockInteractor: {{ module_info.name }}Usecase {
 
     }
 

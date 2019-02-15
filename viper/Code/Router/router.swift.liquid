@@ -10,19 +10,17 @@ import UIKit
 
 class {{ module_info.name }}Router {
 
-    private weak var viewController: UIViewController?
+    private unowned let viewController: UIViewController
 
-    init(viewController: UIViewController) {
+    private init(viewController: UIViewController) {
         self.viewController = viewController
     }
 
     static func assembleModules() -> UIViewController {
         let view = {{ module_info.name }}ViewController()
-        let interactor = {{ module_info.name }}Interactor()
         let router = {{ module_info.name }}Router(viewController: view)
-        let presenter = {{ module_info.name }}ViewPresenter(view: view, interactor: interactor, router: router)
+        let presenter = {{ module_info.name }}ViewPresenter(view: view, router: router)
 
-        interactor.delegate = presenter
         view.presenter = presenter
 
         return view

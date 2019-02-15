@@ -1,0 +1,20 @@
+# Template information section
+name: "interactor"
+summary: "interactor"
+author: "hicka04"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Interactor layer
+- {name: data/interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Contract
+- {name: data/contract/Contract.swift, path: Code/Contract/contract.swift.liquid}
+
+# The declarations for test files
+test_files:
+# Interactor tests
+- {name: data/interactor/InteractorTests.swift, path: Tests/Interactor/interactor_tests.swift.liquid}
